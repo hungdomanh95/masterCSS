@@ -1,0 +1,46 @@
+@import "./mixin.scss";
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Nexa";
+}
+.header {
+  position: relative;
+  padding: 5% 15%;
+  &-background {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &-top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-logo {
+    }
+    &-menu {
+      display: flex;
+      list-style-type: none;
+      &.item {
+        &-link {
+          color: white;
+          text-decoration: none;
+          font-size: 19px;
+          font-weight: 400;
+          margin: 0 20px;
+        }
+      }
+    }
+    &-contact {
+      @include btn();
+      font-size: 16.78px;
+      text-decoration: none;
+      color: rgba(100, 38, 221, 255);
+      // padding: 30px 60px;
+      width: 165px;
+      height: 60px;
+    }
+  }
+}
