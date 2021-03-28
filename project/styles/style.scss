@@ -6,13 +6,14 @@
 }
 .header {
   position: relative;
-  padding: 2% 5%;
-  overflow: hidden;
+  padding: 2% 10%;
+  // overflow: hidden;
   &-background {
     width: 100%;
     position: absolute;
     left: 0;
     top: 0;
+    height: 100%;
   }
   &-image {
     // width: 100%;
@@ -68,12 +69,12 @@
   }
   &-body {
     position: relative;
-    display: flex;
-
+    display: grid;
     margin: 2% 0%;
+    grid-template-columns: 50% 40%;
     &-content {
       color: white;
-      padding: 0px 5%;
+      padding-right: 15%;
       margin: 5% 0%;
       // background-color: red;
       @include flexCenter();
@@ -97,22 +98,23 @@
         // padding: 30px 60px;
         width: 165px;
         height: 60px;
+        padding: 0;
       }
     }
     &-image {
-      width: 50%;
+      width: 100%;
     }
   }
 }
 .about {
   position: relative;
-  // @include flexCenter();
   display: grid;
-  grid-template-columns: 40% 50%;
+  grid-template-columns: 50% 35%;
   align-items: center;
   padding: 5% 0px;
+  grid-gap: 5%;
   &-image {
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
   }
   &-content {
@@ -122,8 +124,8 @@
     &-image {
       position: absolute;
       right: 0;
-      width: 30%;
-      top: 5%;
+      width: 23%;
+      top: 0%;
     }
     &-title {
       color: #6422db;
@@ -167,30 +169,30 @@
   grid-template-columns: 50% 50%;
   justify-content: center;
   align-items: center;
-  &-content-left {
+  &-left {
     position: relative;
     display: flex;
     flex-direction: column;
     padding: 40% 10% 10% 10%;
-    &--title {
+    &-title {
       color: #6422db;
       font-size: 20px;
-      margin: 5% 0;
+      margin: 3% 0;
     }
-    &--heading {
+    &-heading {
       color: #25234d;
       font-size: 40px;
-      margin: 5% 0;
+      margin: 3% 0;
       span {
         display: block;
       }
     }
-    &--desc {
+    &-desc {
       color: #25234d;
-      margin: 5% 0;
+      margin: 3% 0;
     }
-    &--more {
-      margin: 5% 0;
+    &-more {
+      margin: 3% 0;
       color: #171718;
       @include btn();
       font-size: 16.78px;
@@ -198,6 +200,21 @@
       width: 165px;
       height: 60px;
       background-color: #ffc727;
+    }
+  }
+  &-right {
+    position: relative;
+    display: grid;
+    grid-template-columns: 30% 30%;
+    grid-gap: 10%;
+    &-item {
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px 0px rgb(222, 222, 222);
+      padding: 10%;
+      &-title {
+        color: #0e2c47;
+      }
     }
   }
 }
