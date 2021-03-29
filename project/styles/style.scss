@@ -159,6 +159,11 @@
 .services {
   position: relative;
   padding: 0 10%;
+  &-image{
+    position: absolute;
+    bottom: -21%;
+    z-index: 1;
+  }
   &-background {
     width: 100%;
     position: absolute;
@@ -205,15 +210,76 @@
   &-right {
     position: relative;
     display: grid;
-    grid-template-columns: 30% 30%;
-    grid-gap: 10%;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    top:5%;
     &-item {
+      // position: absolute;
+      margin: 10px;
       background-color: white;
       border-radius: 5px;
-      box-shadow: 0px 0px 10px 0px rgb(222, 222, 222);
-      padding: 10%;
+      box-shadow: 0px 0px 10px 0px rgba(222, 222, 222,0.4);
+      padding:10%;
+      &:nth-child(2n) {
+        // position: absolute;
+        position: relative;
+        bottom: 30%;
+        // left: 20%;
+// margin-bottom: 10%;
+      }
       &-title {
         color: #0e2c47;
+        margin: 5% 0;
+      }
+      &-desc{
+        color:#25234d
+      }
+      &-image{
+        width: 35%;
+      }
+    }
+  }
+}
+.testi{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &-background {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    // height: 100%;
+  }
+  &-image{
+    position: relative;
+    width: 80%;
+  }
+  &.title{
+    color: white;
+  }
+  &.heading{
+    color: white;
+  }
+  &.content{
+    background-color: white;
+    width: 30%;
+    height: 50%;
+    border-radius: 20px;
+    max-width: 450px;
+    max-height: 500px;
+    &-detail{
+      // color: white;
+    }
+    &-heading{
+      color: #6427de;
+    }
+    &-star{
+      flex-direction: row;
+      i{
+        color: #ffcc00;
       }
     }
   }
