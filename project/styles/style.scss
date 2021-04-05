@@ -14,10 +14,28 @@ img{
 a{
   text-decoration: none;
 }
-body{
+html {
+  font-size: 62.5%;
+}
+@font-face {
   font-family: "Nexa";
-  font-size: 16px;
-  line-height: 1;
+  src: url("../fonts/NexaLight.otf") format("opentype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Nexa";
+  src: url("../fonts/NexaRegular.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Nexa";
+  src: url("../fonts/NexaBold.otf") format("opentype");
+  font-weight: 700;
+}
+body{
+  font-family: "Nexa", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
 }
 .button{
   display: inline-block;
@@ -29,20 +47,24 @@ body{
   font-size: 16.78px;
   &.header-more{
     background-color: #00dadc;
-    color:#171718
+    color: #171718;
+    padding: 26px 70px;
+    display: inline-block;
   }
   &.about-more{
     background-color: #ffc727;
     color:#171718
   }
 }
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
   .header{
     background-image: url("../../images/img3.png");
-    width: 100%;
-    background-size: cover;
-    height: 100vh;
-    max-height: 1005px;
-    max-width: 1920px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 101rem;
     padding:0 12.5%;
     &-image {
       // width: 100%;
@@ -72,6 +94,7 @@ body{
           }
           &-link{
             color: white;
+            font-size: 1.9rem;
           }
         }
       }
@@ -87,7 +110,7 @@ body{
         padding-right: 5%;
         .header{
           &-heading{
-            font-size: 65px;
+            font-size: 55px;
             color: white;
             span{
               display: block;
@@ -98,6 +121,8 @@ body{
             color: white;
             padding-top:25px;
             padding-bottom: 50px;
+            word-spacing: 7px;
+            font-weight: 400;
           }
         }
       }
@@ -145,11 +170,10 @@ body{
   }
   .services {
     background-image: url("../../images/img11.png");
-    width: 100%;
-    background-size: cover;
-    height: 100vh;
-    max-height: 1005px;
-    max-width: 1920px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 101rem;
     padding:0 12.5%;
     display: flex;
     align-items: center;
@@ -223,14 +247,60 @@ body{
   }
   .testi{
     background-image: url("../../images/img15.png");
-    width: 100%;
-    background-size: cover;
-    height: 100vh;
-    max-height: 1005px;
-    max-width: 1920px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 111rem;
     padding:0 12.5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    &-title{
+      color: white;
+      font-size: 30px;
+      letter-spacing: 9px;
+    }
+    &-heading{
+      color: white;
+      font-size: 70px;
+      margin-bottom: 100px;
+    }
+    &-content{
+      width: 40%;
+      background-color: white;
+      text-align: center;
+      padding: 80px 90px 45px;
+      // padding-top:80px ;
+      // padding-bottom:45px ;s
+      border-radius: 20px;
+      &-detail{
+        margin-bottom: 50px;
+      }
+      &-heading{
+        color: #6427de;
+      }
+      &-star{
+        margin-top: 15px;
+        margin-bottom: 40px;
+        i{
+          color:#ffcc00
+        }
+      }
+      &-button{
+        i{
+          padding: 12px;
+          border: 2px solid #6a697f;
+          border-radius: 50%;
+          margin: 0 10px;
+          &:hover{
+            color: white;
+            background-color: #00dadc;
+            border-color: #00dadc;
+            cursor: pointer;
+          }
+        }
+      }
+    }
   }
+}
