@@ -46,9 +46,13 @@ body {
     color: #171718;
     padding: 26px 70px;
     display: inline-block; }
-  .button.about-more {
+  .button.more {
     background-color: #ffc727;
     color: #171718; }
+
+.container {
+  max-width: 1450px;
+  margin: 0 auto; }
 
 .wrapper {
   max-width: 1920px;
@@ -174,7 +178,7 @@ body {
         border-radius: 5px;
         box-shadow: 0px 0px 10px 0px rgba(222, 222, 222, 0.4);
         padding: 55px 30px; }
-        .wrapper .services-right-item:nth-child(-n+2) {
+        .wrapper .services-right-item:nth-child(-n + 2) {
           margin-bottom: 40px; }
         .wrapper .services-right-item .services-right-title {
           color: #0e2c47;
@@ -228,5 +232,112 @@ body {
           background-color: #00dadc;
           border-color: #00dadc;
           cursor: pointer; }
+  .wrapper .form {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 95px 0px; }
+    .wrapper .form-left {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .wrapper .form-left .form-title {
+        font-size: 30px;
+        color: #6422db;
+        letter-spacing: 8px;
+        font-weight: 400; }
+      .wrapper .form-left .form-heading {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        font-weight: 700;
+        font-size: 70px;
+        color: #25234d; }
+      .wrapper .form-left .form-content {
+        color: #4d4c6f;
+        font-size: 20px;
+        font-weight: 400; }
+    .wrapper .form-right {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0px 0px 10px 0px rgba(222, 222, 222, 0.4);
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 90px 40px; }
+      .wrapper .form-right-input {
+        position: relative; }
+        .wrapper .form-right-input:nth-child(3) input {
+          height: 200px; }
+        .wrapper .form-right-input input, .wrapper .form-right-input area {
+          width: 100%;
+          border: 1px solid #d2d2d8;
+          border-radius: 5px;
+          padding: 20px 20px;
+          margin: 10px 0;
+          font-size: 20px;
+          font-weight: 400;
+          color: #6422db; }
+        .wrapper .form-right-input span {
+          position: absolute;
+          font-size: 15px;
+          left: 15px;
+          color: #6e6e6e;
+          background-color: white;
+          padding: 5px; }
+      .wrapper .form-right button {
+        margin-top: 37px;
+        width: 50%;
+        cursor: pointer;
+        border: none; }
+        .wrapper .form-right button:focus {
+          outline: none; }
+  .wrapper .footer {
+    background-image: url("../../images/img17.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 39rem;
+    padding: 17rem 12.5% 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .wrapper .footer-top {
+      display: flex;
+      align-items: center;
+      width: 100%; }
+      .wrapper .footer-top .footer-menu {
+        padding-left: 6%;
+        display: flex;
+        list-style: none; }
+        .wrapper .footer-top .footer-menu .footer-menu-item:not(:first-child) {
+          margin-left: 35px; }
+        .wrapper .footer-top .footer-menu .footer-menu-link {
+          color: white;
+          font-size: 1.9rem; }
+      .wrapper .footer-top .footer-social {
+        display: flex;
+        margin-left: auto; }
+        .wrapper .footer-top .footer-social i {
+          margin: 0 5px;
+          width: 42px;
+          height: 42px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          background-color: #6e7efd;
+          padding: 10px;
+          border-radius: 50%; }
+          .wrapper .footer-top .footer-social i:hover {
+            background-color: #00dadc; }
+    .wrapper .footer-bottom {
+      margin-top: 90px;
+      margin-bottom: 60px; }
+      .wrapper .footer-bottom p {
+        color: white; }
 
 /*# sourceMappingURL=style.css.map */
