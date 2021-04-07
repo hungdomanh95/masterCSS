@@ -49,6 +49,8 @@ body {
   .button.more {
     background-color: #ffc727;
     color: #171718; }
+  .button:hover {
+    cursor: pointer; }
 
 .container {
   max-width: 1450px;
@@ -112,7 +114,8 @@ body {
   .wrapper .about {
     display: flex;
     padding: 120px 12.5%;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
     .wrapper .about-image {
       width: 43%;
       margin-right: 11%; }
@@ -122,7 +125,7 @@ body {
       .wrapper .about-content-image {
         position: absolute;
         right: 0;
-        width: 17%; }
+        top: 0; }
       .wrapper .about-content-title {
         color: #6422db;
         font-size: 20px;
@@ -144,10 +147,12 @@ body {
     min-height: 101rem;
     padding: 0 12.5%;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
     .wrapper .services-image {
       position: absolute;
-      bottom: -21%;
+      bottom: -14%;
+      left: 0px;
       z-index: 1; }
     .wrapper .services-left {
       width: 38%;
@@ -194,11 +199,13 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     min-height: 111rem;
-    padding: 0 12.5%;
+    padding: 170px 12.5% 0px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
+    .wrapper .testi-image {
+      position: absolute; }
     .wrapper .testi-title {
       color: white;
       font-size: 30px;
@@ -209,40 +216,77 @@ body {
       margin-bottom: 100px; }
     .wrapper .testi-content {
       width: 40%;
-      background-color: white;
-      text-align: center;
-      padding: 80px 90px 45px;
-      border-radius: 20px; }
-      .wrapper .testi-content-detail {
-        margin-bottom: 50px; }
-      .wrapper .testi-content-heading {
-        color: #6427de; }
-      .wrapper .testi-content-star {
-        margin-top: 15px;
-        margin-bottom: 40px; }
-        .wrapper .testi-content-star i {
-          color: #ffcc00; }
-      .wrapper .testi-content-button i {
-        padding: 12px;
-        border: 2px solid #6a697f;
-        border-radius: 50%;
-        margin: 0 10px; }
-        .wrapper .testi-content-button i:hover {
-          color: white;
-          background-color: #00dadc;
-          border-color: #00dadc;
-          cursor: pointer; }
+      position: relative; }
+      .wrapper .testi-content .mark1 {
+        position: absolute;
+        width: 90%;
+        background-color: #895fe9;
+        height: 100%;
+        left: 50%;
+        top: 5%;
+        transform: translateX(-50%);
+        border-radius: 20px;
+        z-index: 1; }
+      .wrapper .testi-content .mark2 {
+        position: absolute;
+        background-color: rgba(137, 95, 233, 0.2);
+        width: 80%;
+        height: 100%;
+        left: 50%;
+        top: 9%;
+        transform: translateX(-50%);
+        border-radius: 20px;
+        z-index: 1; }
+      .wrapper .testi-content .image-left {
+        position: absolute;
+        left: -45px;
+        bottom: 0; }
+      .wrapper .testi-content .image-right {
+        right: -45px;
+        top: 0;
+        position: absolute; }
+      .wrapper .testi-content .testi-detail {
+        background-color: white;
+        text-align: center;
+        padding: 80px 90px 45px;
+        border-radius: 20px;
+        z-index: 999;
+        position: relative; }
+        .wrapper .testi-content .testi-detail .testi-content-detail {
+          margin-bottom: 50px; }
+        .wrapper .testi-content .testi-detail .testi-content-heading {
+          color: #6427de; }
+        .wrapper .testi-content .testi-detail .testi-content-star {
+          margin-top: 15px;
+          margin-bottom: 40px; }
+          .wrapper .testi-content .testi-detail .testi-content-star i {
+            color: #ffcc00; }
+        .wrapper .testi-content .testi-detail .testi-content-button i {
+          padding: 12px;
+          border: 2px solid #6a697f;
+          border-radius: 50%;
+          margin: 0 10px; }
+          .wrapper .testi-content .testi-detail .testi-content-button i:hover {
+            color: white;
+            background-color: #00dadc;
+            border-color: #00dadc;
+            cursor: pointer; }
   .wrapper .form {
     display: flex;
     justify-content: space-between;
     max-width: 1450px;
     margin: 0 auto;
-    padding: 95px 0px; }
+    padding: 95px 0px;
+    position: relative; }
     .wrapper .form-left {
       width: 40%;
       display: flex;
       flex-direction: column;
       justify-content: center; }
+      .wrapper .form-left img {
+        position: absolute;
+        left: -235px;
+        top: 0; }
       .wrapper .form-left .form-title {
         font-size: 30px;
         color: #6422db;
@@ -259,36 +303,43 @@ body {
         font-size: 20px;
         font-weight: 400; }
     .wrapper .form-right {
-      background-color: white;
-      border-radius: 20px;
-      box-shadow: 0px 0px 10px 0px rgba(222, 222, 222, 0.4);
-      width: 40%;
+      width: 42%;
+      background-image: url("../../images/img19.png");
+      background-position: left top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 75rem;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      padding: 90px 40px; }
+      padding: 60px 5%; }
+      .wrapper .form-right img {
+        position: absolute;
+        right: -35px;
+        top: -70px;
+        z-index: 1; }
       .wrapper .form-right-input {
-        position: relative; }
+        position: relative;
+        margin: 10px 0px; }
         .wrapper .form-right-input:nth-child(3) input {
           height: 200px; }
         .wrapper .form-right-input input, .wrapper .form-right-input area {
           width: 100%;
           border: 1px solid #d2d2d8;
           border-radius: 5px;
-          padding: 20px 20px;
-          margin: 10px 0;
+          padding: 15px 20px;
           font-size: 20px;
           font-weight: 400;
           color: #6422db; }
         .wrapper .form-right-input span {
           position: absolute;
           font-size: 15px;
+          top: -10px;
           left: 15px;
           color: #6e6e6e;
           background-color: white;
           padding: 5px; }
       .wrapper .form-right button {
-        margin-top: 37px;
+        margin-top: 4.5rem;
         width: 50%;
         cursor: pointer;
         border: none; }
@@ -333,7 +384,8 @@ body {
           padding: 10px;
           border-radius: 50%; }
           .wrapper .footer-top .footer-social i:hover {
-            background-color: #00dadc; }
+            background-color: #00dadc;
+            cursor: pointer; }
     .wrapper .footer-bottom {
       margin-top: 90px;
       margin-bottom: 60px; }
