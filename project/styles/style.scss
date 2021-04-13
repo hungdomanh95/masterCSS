@@ -95,9 +95,25 @@ body {
   letter-spacing: 0.5rem;
   font-weight: 400;
 }
+.menu {
+  padding-left: 6%;
+  display: flex;
+  list-style: none;
+    &-item:not(:first-child) {
+      margin-left: 35px;
+    }
+    &-link {
+      color: white;
+      font-size: 1.9rem;
+    }
+}
 .container {
   max-width: 75%;
+  height: 100%;
   margin: 0 auto;
+  &--flex{
+    @include flexCenter();
+  }
 }
 .wrapper {
   max-width: 1920px;
@@ -157,9 +173,7 @@ body {
     }
   }
   .about {
-    display: flex;
-    padding: 120px 12.5%;
-    align-items: center;
+    // padding: 120px 12.5%;
     position: relative;
     &-image {
       width: 43%;
@@ -182,9 +196,6 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     min-height: 101rem;
-    padding: 0 12.5%;
-    display: flex;
-    align-items: center;
     position: relative;
     &-image {
       position: absolute;

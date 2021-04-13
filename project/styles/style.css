@@ -80,9 +80,24 @@ body {
   letter-spacing: 0.5rem;
   font-weight: 400; }
 
+.menu {
+  padding-left: 6%;
+  display: flex;
+  list-style: none; }
+  .menu-item:not(:first-child) {
+    margin-left: 35px; }
+  .menu-link {
+    color: white;
+    font-size: 1.9rem; }
+
 .container {
   max-width: 75%;
+  height: 100%;
   margin: 0 auto; }
+  .container--flex {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 .wrapper {
   max-width: 1920px;
@@ -127,9 +142,6 @@ body {
       .wrapper .header-body-image {
         width: 55%; }
   .wrapper .about {
-    display: flex;
-    padding: 120px 12.5%;
-    align-items: center;
     position: relative; }
     .wrapper .about-image {
       width: 43%;
@@ -147,9 +159,6 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     min-height: 101rem;
-    padding: 0 12.5%;
-    display: flex;
-    align-items: center;
     position: relative; }
     .wrapper .services-image {
       position: absolute;
